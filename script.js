@@ -11,10 +11,12 @@ const generateTarget = () => {
 // console.log(generateTarget());
 
 const compareGuesses = (humanGuess, comGuess, targetNumber) => {
-    if (humanGuess === targetNumber) return `Human Win!`;
-    else if (comGuess === targetNumber) return 'Computer Win!';
-    else 'Human Win';
-}
+    const humanDiff = Math.abs(targetNumber - humanGuess);
+    const computerDiff = Math.abs(targetNumber - comGuess);
+
+    if (humanDiff <= computerDiff) return 'human';
+    else return 'computer';
+};
 
 const updateScore = (output) => {
     if (output === 'human') humanScore++;
