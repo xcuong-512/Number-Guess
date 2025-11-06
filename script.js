@@ -20,3 +20,5 @@ const updateScore = (output) => {
     if (output === 'human') humanScore++;
     else if (output === 'computer') computerScore++;
 }
+
+const advanceRound = () => currentRoundNumber++;
